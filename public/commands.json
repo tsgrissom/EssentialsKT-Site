@@ -1,0 +1,68 @@
+{
+  "replacement": [
+    {
+      "command": "gamemode",
+      "aliases": ["gm", "egamemode", "egm"],
+      "source": {
+        "url": "#",
+        "text": "GameModeCommand.kt"
+      },
+      "permissions": ["essentials.gamemode", "more..."],
+      "description": "Set a player's gamemode, cycle their gamemode, or select their gamemode from a GUI."
+    }
+  ],
+  "original": [
+    {
+      "command": "clearchat",
+      "aliases": ["clearc", "cc", "cls"],
+      "source": {
+        "url": "https://github.com/tsgrissom",
+        "text": "ClearChatCommand.kt"
+      },
+      "permissions": ["essentialskt.clearchat", "essentialskt.clearchat.all", "essentialskt.clearchat.others", "essentialskt.clearchat.exemptall"],
+      "description": "Clears the chat box of either yourself, another player, or all players on the server who do not have <code class=\"fw-bold\">essentialskt.clearchat.exemptall</code>."
+    },
+    {
+      "command": "damage",
+      "aliases": ["dmg", "hurt", "wound", "injure"],
+      "source": {
+        "url": "#",
+        "text": "DamageCommand.kt"
+      },
+      "permissions": ["essentialskt.damage", "essentialskt.damage.percent"],
+      "description": "Damages the targeted player for either a fixed amount of HP or a percentage of their max health."
+    },
+    {
+      "command": "esskt",
+      "aliases": ["essentialskt"],
+      "source": {
+        "url": "#",
+        "text": "EssKtCommand.kt"
+      },
+      "permissions": ["essentialskt.essentialskt"],
+      "description": "View plugin information for EssentialsKT."
+    },
+    {
+      "command": "ipaddress",
+      "aliases": ["ip", "address", "eipaddress", "eip", "eaddress"],
+      "source": {
+        "url": "#",
+        "text": "IpAddressCommand.kt"
+      },
+      "permissions": ["essentialskt.ipaddress"],
+      "description": "View the IP address of a player. Click to copy to clipboard."
+    }
+  ],
+  "grouped": [
+    {
+      "command": "clearweather",
+      "aliases": ["clearw", "unrain", "norain", "rainoff"],
+      "source": {
+        "url": "#",
+        "text": "QuickWeatherCommands.kt"
+      },
+      "permissions": ["essentials.weather"],
+      "description": "Clears the weather of a given world"
+    }
+  ]
+}

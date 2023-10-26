@@ -1,0 +1,44 @@
+:root {
+    --f-oxy: "Oxygen", serif;
+    --f-oxy-mono: "Oxygen Mono", serif;
+}
+
+/* Utility Classes */
+.text-pink {
+    color: var(--bs-pink);
+}
+
+.f-oxy {
+    font-family: var(--f-oxy);
+}
+
+.f-oxy-mono {
+    font-family: var(--f-oxy-mono);
+}
+
+.ess-perm {
+    color: goldenrod;
+}
+
+/* Element Styling */
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a.table-link {
+    color: #d63384;
+    text-decoration: underline;
+}
+a.table-link:hover {
+    text-decoration: none;
+}
+
+code {
+    /*color: #6c757d;*/
+    background-color: #f8f9fa;
+    border-radius: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
