@@ -34,6 +34,13 @@ a.table-link {
 a.table-link:hover {
     text-decoration: none;
 }
+a.text-pink {
+    text-decoration: underline;
+    color: #d63384;
+}
+a.text-pink:hover {
+    text-decoration: none;
+}
 
 code {
     /*color: #6c757d;*/

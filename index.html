@@ -7,6 +7,9 @@
     <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Oxygen+Mono&display=swap" rel="stylesheet">
     <link href="../style.css" rel="stylesheet">
 
     <!-- Scripts -->
@@ -16,30 +19,34 @@
 </head>
 <body>
 
+<!-- Header -->
 <header class="container mt-5" id="section-header">
     <div class="row">
         <div class="col-12 col-md-8">
-            <h1 class="display-1">EssentialsKT</h1>
-            <h2 class="display-5 text-muted">Addon for EssentialsX</h2>
+            <h1 class="display-1 f-oxy">
+                EssentialsKT
+            </h1>
+            <h2 class="display-5 mt-0 text-muted">Addon for EssentialsX</h2>
         </div>
-        <div class="col-12 col-md-4 text-md-center pt-md-4">
-            <div class="btn-group-vertical">
-                <a class="btn btn-outline-dark" href="https://github.com/tsgrissom/EssentialsKT" target="_blank">
-                    <i class="bi bi-github"></i>
-                    Repository
-                </a>
-                <a class="btn btn-outline-primary" href="/commands/">
-                    <i class="bi bi-list"></i>
-                    Commands
-                </a>
-                <a class="btn btn-outline-primary" href="/api/">
-                    <i class="bi bi-code-slash"></i>
-                    Plugin API
-                </a>
+        <div class="col-12 col-md-4 text-md-center pt-md-2">
+            <div class="card">
+                <div class="card-body">
+                    <a class="btn btn-outline-dark" href="https://github.com/tsgrissom/EssentialsKT" target="_blank">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a class="btn btn-outline-primary" href="/commands/">
+                        <i class="bi bi-list"></i>
+                        Commands
+                    </a>
+                    <a class="btn btn-outline-primary mt-0 mt-md-2 mt-lg-0" href="/api/">
+                        <i class="bi bi-code-slash"></i>
+                        Plugin API
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    <p class="lead">
+    <p class="lead mt-2">
         EssentialsKT is a Minecraft plugin project by <a href="https://github.com/tsgrissom" target="_blank" aria-label="Go to author's GitHub profile">T0xicTyler</a>
     </p>
     <p class="lead">
@@ -57,16 +64,17 @@
     <hr class="mt-4">
 </header>
 
+<!-- Layout -->
 <main class="container mt-3" id="section-main">
 
     <!--Projects Section-->
     <div id="section-projects">
         <div class="row">
-            <h3 class="display-4">Projects</h3>
+            <h3 class="display-4 f-oxy">Projects</h3>
         </div>
         <div class="row">
             <div class="col-12 col-md-6">
-                <h3>EssentialsKT</h3>
+                <h3 class="f-oxy">EssentialsKT</h3>
                 <p class="lead">Addon for EssentialsX Minecraft plugin</p>
                 <ul>
                     <li>Many new commands, all matching the style of Essentials</li>
@@ -85,10 +93,12 @@
                 </ul>
             </div>
             <div class="col-12 col-md-6">
-                <h3>Plugin API</h3>
+                <h3 class="f-oxy">Plugin API</h3>
                 <p class="lead">
                     Powerful plugin API designed to be used with Kotlin<br>
-                    <a href="/api/">API documentation</a>
+                    <a href="/api/">
+                        Documentation
+                    </a>
                 </p>
                 <ul>
                     <li>Chat Component API builders for clickable and hover-able text</li>
