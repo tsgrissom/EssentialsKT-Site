@@ -4,7 +4,7 @@ const rowGrouped = document.getElementById('row-grouped-commands');
 
 const generateRow = entry => {
     const {aliases, command, description, permissions, source} = entry
-    const columnNone = '<th><p class="text-danger">None</p></th>';
+    const columnNone = '<th><p class="fw-normal">None</p></th>';
     let row = '<tr>';
 
     if (source.text !== undefined) {
@@ -117,7 +117,7 @@ fetch('../commands.json')
     .then(response => response.json())
     .then(data => {
         const {grouped, original, replacement} = data;
-        const noneText = '<p class="lead text-danger">None</p>';
+        const noneText = '<p class="lead">None</p>';
 
         if (grouped.length === 0) {
             rowGrouped.innerHTML = noneText;

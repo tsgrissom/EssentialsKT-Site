@@ -9,6 +9,16 @@
       },
       "permissions": ["essentials.gamemode", "more..."],
       "description": "Set a player's gamemode, cycle their gamemode, or select their gamemode from a GUI."
+    },
+    {
+      "command": "gms",
+      "aliases": ["gm0", "gms", "egms", "gm1", "gmc", "egmc", "gm2", "gma", "egma", "gmsp", "egmsp", "gmt", "gmtoggle"],
+      "source": {
+        "url": "#",
+        "text": "GmxCommand.kt"
+      },
+      "permissions": ["essentials.gamemode", "etc."],
+      "description": "Shorthand for /gamemode setting commands."
     }
   ],
   "original": [
@@ -51,6 +61,66 @@
       },
       "permissions": ["essentialskt.ipaddress"],
       "description": "View the IP address of a player. Click to copy to clipboard."
+    },
+    {
+      "command": "renameitem",
+      "aliases": [],
+      "source": {
+        "url": "#",
+        "text": "RenameItemCommand.kt"
+      },
+      "permissions": ["essentialskt.renameitem", "essentialskt.renameitem.bypasslimit"],
+      "description": "Rename the item in your hand with a new display name."
+    },
+    {
+      "command": "setfoodlevel",
+      "aliases": [],
+      "source": {
+        "url": "#",
+        "text": "SetFoodLevelCommand.kt"
+      },
+      "permissions": ["essentialskt.setfoodlevel", "essentialskt.setfoodlevel.percent"],
+      "description": "Set a player's food level to either a fixed integer value or a percent value of the max food level of 20."
+    },
+    {
+      "command": "sethealth",
+      "aliases": [],
+      "source": {
+        "url": "#",
+        "text": "SetHealthCommand.kt"
+      },
+      "permissions": ["essentialskt.sethealth", "essentialskt.sethealth.max", "essentialskt.sethealth.percent"],
+      "description": "Set a player's health to a fixed value or a percentage of their max health, or set the max health value with the --max flag."
+    },
+    {
+      "command": "toggledownfall",
+      "aliases": ["tdf"],
+      "source": {
+        "url": "#",
+        "text": "ToggleDownfallCommand.kt"
+      },
+      "permissions": ["essentialskt.toggledownfall"],
+      "description": "Toggles weather in the current world. Restoration of old Minecraft command."
+    },
+    {
+      "command": "uniqueid",
+      "aliases": ["uuid", "uid"],
+      "source": {
+        "url": "#",
+        "text": "UniqueIdCommand.kt"
+      },
+      "permissions": ["essentialskt.uniqueid"],
+      "description": "View a player's UUID. Click to copy it to clipboard."
+    },
+    {
+      "command": "worlds",
+      "aliases": ["eworlds", "listworlds", "elistworlds"],
+      "source": {
+        "url": "#",
+        "text": "WorldsCommand.kt"
+      },
+      "permissions": ["essentials.world"],
+      "description": "List all worlds."
     }
   ],
   "grouped": [
