@@ -1,138 +1,327 @@
 {
-  "replacement": [
+  "replacement":[
     {
-      "command": "gamemode",
-      "aliases": ["gm", "egamemode", "egm"],
-      "source": {
-        "url": "#",
-        "text": "GameModeCommand.kt"
+      "command":"gamemode",
+      "aliases":[
+        "gm",
+        "egamemode",
+        "egm"
+      ],
+      "source":{
+        "url":"#",
+        "text":"GameModeCommand.kt"
       },
-      "permissions": ["essentials.gamemode", "more..."],
-      "description": "Set a player's gamemode, cycle their gamemode, or select their gamemode from a GUI."
+      "permissions":[
+        "essentials.gamemode",
+        "more..."
+      ],
+      "description":"Set a player's gamemode, cycle their gamemode, or select their gamemode from a GUI."
     },
     {
-      "command": "gms",
-      "aliases": ["gm0", "gms", "egms", "gm1", "gmc", "egmc", "gm2", "gma", "egma", "gmsp", "egmsp", "gmt", "gmtoggle"],
-      "source": {
-        "url": "#",
-        "text": "GmxCommand.kt"
+      "command":"gms",
+      "aliases":[
+        "gm0",
+        "gms",
+        "egms",
+        "gm1",
+        "gmc",
+        "egmc",
+        "gm2",
+        "gma",
+        "egma",
+        "gmsp",
+        "egmsp",
+        "gmt",
+        "gmtoggle"
+      ],
+      "source":{
+        "url":"#",
+        "text":"GmxCommand.kt"
       },
-      "permissions": ["essentials.gamemode", "etc."],
-      "description": "Shorthand for /gamemode setting commands."
+      "permissions":[
+        "essentials.gamemode",
+        "etc."
+      ],
+      "description":"Shorthand for /gamemode setting commands."
+    },
+    {
+      "command":"list",
+      "aliases":[
+        "ls"
+      ],
+      "source":{
+        "url":"#",
+        "text":"ListCommand.kt"
+      },
+      "permissions":[
+        "essentialskt.list",
+        "essentialskt.list.players",
+        "essentialskt.list.mobs"
+      ],
+      "description":"Original command simply listed players. The new <code>/list</code> displays various lists in text or GUI form: worlds, players, entity types, mob types, etc."
     }
   ],
-  "original": [
+  "original":[
     {
-      "command": "clearchat",
-      "aliases": ["clearc", "cc", "cls"],
-      "source": {
-        "url": "https://github.com/tsgrissom",
-        "text": "ClearChatCommand.kt"
+      "command":"clearchat",
+      "aliases":[
+        "clearc",
+        "cc",
+        "cls"
+      ],
+      "source":{
+        "url":"https://github.com/tsgrissom",
+        "text":"ClearChatCommand.kt"
       },
-      "permissions": ["essentialskt.clearchat", "essentialskt.clearchat.all", "essentialskt.clearchat.others", "essentialskt.clearchat.exemptall"],
-      "description": "Clears the chat box of either yourself, another player, or all players on the server who do not have <code class=\"fw-bold\">essentialskt.clearchat.exemptall</code>."
+      "permissions":[
+        "essentialskt.clearchat",
+        "essentialskt.clearchat.all",
+        "essentialskt.clearchat.others",
+        "essentialskt.clearchat.exemptall"
+      ],
+      "description":"Clears the chat box of either yourself, another player, or all players on the server who do not have <code class=\"fw-bold\">essentialskt.clearchat.exemptall</code>."
     },
     {
-      "command": "damage",
-      "aliases": ["dmg", "hurt", "wound", "injure"],
-      "source": {
-        "url": "#",
-        "text": "DamageCommand.kt"
+      "command":"damage",
+      "aliases":[
+        "dmg",
+        "hurt",
+        "wound",
+        "injure"
+      ],
+      "source":{
+        "url":"#",
+        "text":"DamageCommand.kt"
       },
-      "permissions": ["essentialskt.damage", "essentialskt.damage.percent"],
-      "description": "Damages the targeted player for either a fixed amount of HP or a percentage of their max health."
+      "permissions":[
+        "essentialskt.damage",
+        "essentialskt.damage.percent"
+      ],
+      "description":"Damages the targeted player for either a fixed amount of HP or a percentage of their max health."
     },
     {
-      "command": "esskt",
-      "aliases": ["essentialskt"],
-      "source": {
-        "url": "#",
-        "text": "EssKtCommand.kt"
+      "command":"esskt",
+      "aliases":[
+        "essentialskt"
+      ],
+      "source":{
+        "url":"#",
+        "text":"EssKtCommand.kt"
       },
-      "permissions": ["essentialskt.essentialskt"],
-      "description": "View plugin information for EssentialsKT."
+      "permissions":[
+        "essentialskt.essentialskt"
+      ],
+      "description":"View plugin information for EssentialsKT."
     },
     {
-      "command": "ipaddress",
-      "aliases": ["ip", "address", "eipaddress", "eip", "eaddress"],
-      "source": {
-        "url": "#",
-        "text": "IpAddressCommand.kt"
+      "command":"ipaddress",
+      "aliases":[
+        "ip",
+        "address",
+        "eipaddress",
+        "eip",
+        "eaddress"
+      ],
+      "source":{
+        "url":"#",
+        "text":"IpAddressCommand.kt"
       },
-      "permissions": ["essentialskt.ipaddress"],
-      "description": "View the IP address of a player. Click to copy to clipboard."
+      "permissions":[
+        "essentialskt.ipaddress"
+      ],
+      "description":"View the IP address of a player. Click to copy to clipboard."
     },
     {
-      "command": "renameitem",
-      "aliases": [],
-      "source": {
-        "url": "#",
-        "text": "RenameItemCommand.kt"
+      "command":"renameitem",
+      "aliases":[ ],
+      "source":{
+        "url":"#",
+        "text":"RenameItemCommand.kt"
       },
-      "permissions": ["essentialskt.renameitem", "essentialskt.renameitem.bypasslimit"],
-      "description": "Rename the item in your hand with a new display name."
+      "permissions":[
+        "essentialskt.renameitem",
+        "essentialskt.renameitem.bypasslimit"
+      ],
+      "description":"Rename the item in your hand with a new display name."
     },
     {
-      "command": "setfoodlevel",
-      "aliases": [],
-      "source": {
-        "url": "#",
-        "text": "SetFoodLevelCommand.kt"
+      "command":"setfoodlevel",
+      "aliases":[ ],
+      "source":{
+        "url":"#",
+        "text":"SetFoodLevelCommand.kt"
       },
-      "permissions": ["essentialskt.setfoodlevel", "essentialskt.setfoodlevel.percent"],
-      "description": "Set a player's food level to either a fixed integer value or a percent value of the max food level of 20."
+      "permissions":[
+        "essentialskt.setfoodlevel",
+        "essentialskt.setfoodlevel.percent"
+      ],
+      "description":"Set a player's food level to either a fixed integer value or a percent value of the max food level of 20."
     },
     {
-      "command": "sethealth",
-      "aliases": [],
-      "source": {
-        "url": "#",
-        "text": "SetHealthCommand.kt"
+      "command":"sethealth",
+      "aliases":[ ],
+      "source":{
+        "url":"#",
+        "text":"SetHealthCommand.kt"
       },
-      "permissions": ["essentialskt.sethealth", "essentialskt.sethealth.max", "essentialskt.sethealth.percent"],
-      "description": "Set a player's health to a fixed value or a percentage of their max health, or set the max health value with the --max flag."
+      "permissions":[
+        "essentialskt.sethealth",
+        "essentialskt.sethealth.max",
+        "essentialskt.sethealth.percent"
+      ],
+      "description":"Set a player's health to a fixed value or a percentage of their max health, or set the max health value with the --max flag."
     },
     {
-      "command": "toggledownfall",
-      "aliases": ["tdf"],
-      "source": {
-        "url": "#",
-        "text": "ToggleDownfallCommand.kt"
+      "command":"toggledownfall",
+      "aliases":[
+        "tdf"
+      ],
+      "source":{
+        "url":"#",
+        "text":"ToggleDownfallCommand.kt"
       },
-      "permissions": ["essentialskt.toggledownfall"],
-      "description": "Toggles weather in the current world. Restoration of old Minecraft command."
+      "permissions":[
+        "essentialskt.toggledownfall"
+      ],
+      "description":"Toggles weather in the current world. Restoration of old Minecraft command."
     },
     {
-      "command": "uniqueid",
-      "aliases": ["uuid", "uid"],
-      "source": {
-        "url": "#",
-        "text": "UniqueIdCommand.kt"
+      "command":"uniqueid",
+      "aliases":[
+        "uuid",
+        "uid"
+      ],
+      "source":{
+        "url":"#",
+        "text":"UniqueIdCommand.kt"
       },
-      "permissions": ["essentialskt.uniqueid"],
-      "description": "View a player's UUID. Click to copy it to clipboard."
+      "permissions":[
+        "essentialskt.uniqueid"
+      ],
+      "description":"View a player's UUID. Click to copy it to clipboard."
     },
     {
-      "command": "worlds",
-      "aliases": ["eworlds", "listworlds", "elistworlds"],
-      "source": {
-        "url": "#",
-        "text": "WorldsCommand.kt"
+      "command":"worlds",
+      "aliases":[
+        "eworlds",
+        "listworlds",
+        "elistworlds"
+      ],
+      "source":{
+        "url":"#",
+        "text":"WorldsCommand.kt"
       },
-      "permissions": ["essentials.world"],
-      "description": "List all worlds."
+      "permissions":[
+        "essentials.world"
+      ],
+      "description":"List all worlds."
     }
   ],
-  "grouped": [
+  "grouped":[
     {
-      "command": "clearweather",
-      "aliases": ["clearw", "unrain", "norain", "rainoff"],
-      "source": {
-        "url": "#",
-        "text": "QuickWeatherCommands.kt"
+      "command":"day",
+      "aliases":[ ],
+      "source":{
+        "url":"#",
+        "text":"QuickTimeCommands.kt"
       },
-      "permissions": ["essentials.weather"],
-      "description": "Clears the weather of a given world"
+      "permissions":[
+        "essentials.time",
+        "essentials.time.set",
+        "essentials.time.world.all"
+      ],
+      "description":"Set a world's time to 1000 ticks (daytime.)"
+    },
+    {
+      "command":"noon",
+      "aliases":[ ],
+      "source":{
+        "url":"#",
+        "text":"QuickTimeCommands.kt"
+      },
+      "permissions":[
+        "essentials.time",
+        "essentials.time.set",
+        "essentials.time.world.all"
+      ],
+      "description":"Set a world's time to 6000 ticks (noon.)"
+    },
+    {
+      "command":"sunset",
+      "aliases":[
+        "dusk"
+      ],
+      "source":{
+        "url":"#",
+        "text":"QuickTimeCommands.kt"
+      },
+      "permissions":[
+        "essentials.time",
+        "essentials.time.set",
+        "essentials.time.world.all"
+      ],
+      "description":"Set a world's time to 12000 ticks (sunset.)"
+    },
+    {
+      "command":"night",
+      "aliases":[ ],
+      "source":{
+        "url":"#",
+        "text":"QuickTimeCommands.kt"
+      },
+      "permissions":[
+        "essentials.time",
+        "essentials.time.set",
+        "essentials.time.world.all"
+      ],
+      "description":"Set a world's time to 15000 ticks (night.)"
+    },
+    {
+      "command":"midnight",
+      "aliases":[ ],
+      "source":{
+        "url":"#",
+        "text":"QuickTimeCommands.kt"
+      },
+      "permissions":[
+        "essentials.time",
+        "essentials.time.set",
+        "essentials.time.world.all"
+      ],
+      "description":"Set a world's time to 18000 ticks (midnight.)"
+    },
+    {
+      "command":"sunrise",
+      "aliases":[
+        "dawn"
+      ],
+      "source":{
+        "url":"#",
+        "text":"QuickTimeCommands.kt"
+      },
+      "permissions":[
+        "essentials.time",
+        "essentials.time.set",
+        "essentials.time.world.all"
+      ],
+      "description":"Set a world's time to 23000 ticks (sunrise.)"
+    },
+    {
+      "command":"clearweather",
+      "aliases":[
+        "clearw",
+        "unrain",
+        "norain",
+        "rainoff"
+      ],
+      "source":{
+        "url":"#",
+        "text":"QuickWeatherCommands.kt"
+      },
+      "permissions":[
+        "essentials.weather"
+      ],
+      "description":"Clears the weather of a given world"
     }
   ]
 }
