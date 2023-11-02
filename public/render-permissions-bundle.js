@@ -3957,7 +3957,7 @@ module.exports = new Type('tag:yaml.org,2002:timestamp', {
 });
 
 },{"../type":12}],26:[function(require,module,exports){
-/* jshint browser: true */
+/* jshint browser: true, node: true */
 const yaml = require('js-yaml');
 const YML_URL = 'https://raw.githubusercontent.com/tsgrissom/EssentialsKT/main/src/main/resources/plugin.yml';
 

@@ -1,9 +1,7 @@
-const rowReplacement = document.getElementById('row-replacement-commands');
-const rowOriginal = document.getElementById('row-original-commands');
-const rowGrouped = document.getElementById('row-grouped-commands');
+/* jshint browser: true, node: true */
 
 const generateRow = entry => {
-    const {aliases, command, description, permissions, source} = entry
+    const {aliases, command, description, permissions, source} = entry;
     const columnNone = '<th><p class="fw-normal">None</p></th>';
     let row = '<tr>';
 
@@ -23,7 +21,7 @@ const generateRow = entry => {
             <th>
                 <code>/${command}</code>
             </th>
-        `
+        `;
 
     if (aliases === undefined || aliases.length === 0) {
         row += columnNone;
@@ -50,9 +48,7 @@ const generateRow = entry => {
         let permissionsAsListItems = '';
 
         for (const p of permissions) {
-            const codeTag = p.startsWith('essentials.')
-                ? `<code class="ess-perm">${p}</code>`
-                : `<code>${p}</code>`;
+            const codeTag = p.startsWith('essentials.') ? `<code class="ess-perm">${p}</code>` : `<code>${p}</code>`;
             permissionsAsListItems += `<li>${codeTag}</li>`;
         }
 
@@ -79,7 +75,7 @@ const generateRow = entry => {
 
     row += '</tr>';
     return row;
-}
+};
 
 const populateTable = (element, data) => {
     let allRows = '';
@@ -99,7 +95,7 @@ const populateTable = (element, data) => {
                 <th class="col">Description</th>
             </tr>
         </thead>
-    `
+    `;
     const tBody = `
         <tbody>
             ${allRows}
@@ -110,34 +106,38 @@ const populateTable = (element, data) => {
             ${tHead}
             ${tBody}
         </table>
-    `
-}
+    `;
+};
+
+const populateContents = data => {
+    const rowReplacement = document.getElementById('row-replacement-commands');
+    const rowOriginal = document.getElementById('row-original-commands');
+    const rowGrouped = document.getElementById('row-grouped-commands');
+
+    const {grouped, original, replacement} = data;
+    const noneText = '<p class="lead">None</p>';
+
+    if (grouped.length === 0) {
+        rowGrouped.innerHTML = noneText;
+    } else {
+        populateTable(rowGrouped, grouped);
+    }
+
+    if (original.length === 0) {
+        rowOriginal.innerHTML = noneText;
+    } else {
+        populateTable(rowOriginal, original);
+    }
+
+    if (replacement.length === 0) {
+        rowReplacement.innerHTML = noneText;
+    } else {
+        populateTable(rowReplacement, replacement);
+    }
+};
 
 fetch('../commands.json')
     .then(response => response.json())
-    .then(data => {
-        const {grouped, original, replacement} = data;
-        const noneText = '<p class="lead">None</p>';
-
-        if (grouped.length === 0) {
-            rowGrouped.innerHTML = noneText;
-        } else {
-            populateTable(rowGrouped, grouped);
-        }
-
-        if (original.length === 0) {
-            rowOriginal.innerHTML = noneText;
-        } else {
-            populateTable(rowOriginal, original);
-        }
-
-        if (replacement.length === 0) {
-            rowReplacement.innerHTML = noneText;
-        } else {
-            populateTable(rowReplacement, replacement);
-        }
-    })
-    .catch(err => {
-        console.error('Error:', err)
-    });
+    .then(data => populateContents(data))
+    .catch(err => console.error('Error:', err));
 
