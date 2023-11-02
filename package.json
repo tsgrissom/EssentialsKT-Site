@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bundle": "cd public && browserify render-table-permissions.js -o render-table-permissions-bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "cd public && browserify render-permissions.js -o render-permissions-bundle.js",
+    "test": "npm run bundle && node index.js",
     "start": "node index.js"
   },
   "keywords": [],

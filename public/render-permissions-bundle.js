@@ -3970,10 +3970,26 @@ const isSpecialPermission = key => specialPermissions.includes(key);
 
 const displayPermission = (k, v) => {
     let elem = '';
-    elem += isEssentialsPermission(k) ? '<span class="ess-perm">' : '<span>';
+    elem += isEssentialsPermission(k) ? '<span class="lead ess-perm">' : '<span class="lead">';
     elem += `${k}</span><br>`;
+
+    const {description, children} = v
+
+    if (description !== undefined) {
+        elem += `<span>${description}</span><br>`;
+    }
+    if (children !== undefined) {
+        elem += '<span>Children:</span><br>';
+        let childList = '<ul>';
+        for (const [k, v] of Object.entries(children)) {
+            childList += `<li>${k}: ${v}</li>`;
+        }
+        childList += '</ul>';
+        elem += childList;
+    }
+
     return elem;
-}
+};
 
 fetch(YML_URL)
     .then(response => response.text())
