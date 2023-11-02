@@ -4076,10 +4076,6 @@ const populateContents = data => {
 fetch(YML_URL)
     .then(response => response.text())
     .then(text => yaml.load(text))
-    .then(data => {
-        populateContents(data);
-    })
-    .catch(err => {
-        console.error('Error:', err);
-    });
+    .then(data => populateContents(data))
+    .catch(err => console.error('Error:', err));
 },{"js-yaml":1}]},{},[26]);
