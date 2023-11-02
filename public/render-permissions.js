@@ -8,10 +8,14 @@ const isWildcardPermission = key => key.endsWith('.*');
 const isEssentialsPermission = key => key.startsWith('essentials.');
 const isSpecialPermission = key => specialPermissions.includes(key);
 
+const renderPermissionAsText = k => {
+    let render = isEssentialsPermission(k) ? '<code class="ess-perm">' : '<code>';
+    render += `${k}</code>`;
+    return render;
+}
+
 const renderPermissionAsRow = (k, v) => {
-    let rowContents = '<td>';
-    rowContents += isEssentialsPermission(k) ? '<code class="ess-perm">' : '<code>';
-    rowContents += `${k}</code></td>`;
+    let rowContents = `<td>${renderPermissionAsText(k)}</td>`;
 
     const {description, children} = v;
     const def = v.default === undefined ? 'op' : v.default;
@@ -29,7 +33,8 @@ const renderPermissionAsRow = (k, v) => {
             let childList = '<td><ul>';
 
             for (const [k, v] of Object.entries(children)) {
-                childList += `<li>${k}: ${v}</li>`;
+                const renderedKey = renderPermissionAsText(k);
+                childList += `<li>${renderedKey}: ${v}</li>`;
             }
 
             childList += '</ul></td>';
