@@ -8,7 +8,15 @@ fetch(YML_URL)
     .then(text => yaml.load(text))
     .then(data => {
         const {permissions} = data;
-        console.log('Permissions:', permissions);
+        const elem = document.getElementById('paragraph-permissions');
+        let parsed = '';
+
+        for (const [k, v] of Object.entries(permissions)) {
+            console.log(`${k}: ${v}`);
+            parsed += `<span>${k}</span><br>`;
+        }
+
+        elem.innerHTML = parsed;
     })
     .catch(err => {
         console.error('Error:', err);
