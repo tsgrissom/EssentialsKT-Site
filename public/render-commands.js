@@ -110,9 +110,9 @@ const populateTable = (element, data) => {
 };
 
 const populateContents = data => {
-    const rowReplacement = document.getElementById('row-replacement-commands');
-    const rowOriginal = document.getElementById('row-original-commands');
-    const rowGrouped = document.getElementById('row-grouped-commands');
+    const rowReplacement = document.getElementById('table-replacement');
+    const rowOriginal = document.getElementById('table-original');
+    const rowGrouped = document.getElementById('table-grouped');
 
     const {grouped, original, replacement} = data;
     const noneText = '<p class="lead">None</p>';

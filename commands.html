@@ -21,25 +21,23 @@
 </head>
 <body>
 
-<nav class="container mt-3">
-    <div class="row">
-        <div class="col-6">
-            <a class="btn btn-outline-primary" href="/" aria-label="Return to home page">
-                <i class="bi bi-arrow-left"></i>
-                Home
-            </a>
-            <a class="btn btn-outline-warning mt-1-sm mt-0-md" href="/permissions" aria-label="View the full permissions documentation">
-                Permissions
-            </a>
-        </div>
+<nav class="container-fluid mt-3">
+    <div class="mx-3">
+        <a class="btn btn-outline-primary" href="/" aria-label="Return to home page">
+            <i class="bi bi-arrow-left"></i>
+            Home
+        </a>
+        <a class="btn btn-outline-primary mt-1 mt-sm-0" href="/permissions" aria-label="View the full permissions documentation">
+            Permissions
+        </a>
     </div>
 </nav>
 
-<header class="container mt-2">
-    <div class="row">
+<header class="container-fluid mt-2">
+    <div class="row mx-1">
         <h3 class="display-4">Commands</h3>
     </div>
-    <div class="row">
+    <div class="row mx-1">
         <p class="lead">
             <a href="/permissions">Permissions</a>
         </p>
@@ -50,27 +48,33 @@
             <a href="#row-original-commands">Original Commands</a>,
             and <a href="#row-grouped-commands">Grouped Commands</a>
         </p>
-        <ul class="lead">
+        <ul class="lead mx-4">
             <li>Permissions which are from the base Essentials plugin (<code>essentials.*</code>) are marked as <span class="ess-perm">gold</span>.</li>
         </ul>
     </div>
 </header>
 
-<main class="container mt-2">
-    <div class="row">
-        <h3>Replacement Commands</h3>
+<main class="mt-2" id="section-main">
+    <div class="container-fluid">
+        <div class="row">
+            <h3 class="display-6 mx-3">Replacement Commands</h3>
+        </div>
+        <div class="row" id="table-replacement"></div>
     </div>
-    <div class="row" id="row-replacement-commands"></div>
 
-    <div class="row">
-        <h3>Original Commands</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <h3 class="display-6 mx-3">Original Commands</h3>
+        </div>
+        <div class="row" id="table-original"></div>
     </div>
-    <div class="row" id="row-original-commands"></div>
 
-    <div class="row">
-        <h3>Grouped Commands</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <h3 class="display-6 mx-3">Grouped Commands</h3>
+        </div>
+        <div class="row" id="table-grouped"></div>
     </div>
-    <div class="row" id="row-grouped-commands"></div>
 </main>
 
 </body>

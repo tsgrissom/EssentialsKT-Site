@@ -21,22 +21,22 @@
 </head>
 <body>
 
-<nav class="container mt-3">
-    <div class="row">
-        <div class="col-2">
-            <a class="btn btn-outline-primary" href="/" aria-label="Return to home page">
-                <i class="bi bi-arrow-left"></i>
-                Home
-            </a>
-        </div>
+<nav class="container-fluid mt-3">
+    <div class="mx-3">
+        <a class="btn btn-outline-primary" href="/" aria-label="Return to home page">
+            <i class="bi bi-arrow-left"></i>
+        </a>
+        <a class="btn btn-outline-primary " href="/commands" aria-label="View the full permissions documentation">
+            Commands
+        </a>
     </div>
 </nav>
 
-<header class="container mt-2">
-    <div class="row">
+<header class="container-fluid mt-2">
+    <div class="row mx-1">
         <h3 class="display-4">Permissions</h3>
     </div>
-    <div class="row">
+    <div class="row mx-1">
         <p class="lead">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, assumenda, culpa facere hic illum incidunt iste placeat quae quaerat quibusdam rerum tempora tenetur vel velit.
         </p>
@@ -44,20 +44,26 @@
 </header>
 
 <!-- Layout -->
-<main class="container mt-3" id="section-main">
-    <div id="section-wildcard">
-        <h2 class="display-4">Wildcard Permissions</h2>
-        <div id="table-wildcard"></div>
+<main class="mt-2" id="section-main">
+    <div class="container-fluid" id="section-wildcard">
+        <div class="row">
+            <h3 class="display-6 mx-3">Wildcard Permissions</h3>
+        </div>
+        <div class="row" id="table-wildcard"></div>
     </div>
 
-    <div id="section-regular">
-        <h2 class="display-4">Regular Permissions</h2>
-        <div id="table-regular"></div>
+    <div class="container-fluid" id="section-regular">
+        <div class="row">
+            <h3 class="display-6 mx-3">Regular Permissions</h3>
+        </div>
+        <div class="row" id="table-regular"></div>
     </div>
 
-    <div id="section-special">
-        <h2 class="display-4">Special Permissions</h2>
-        <div id="table-special"></div>
+    <div class="container-fluid" id="section-special">
+        <div class="row">
+            <h3 class="display-6 mx-3">Special Permissions</h3>
+        </div>
+        <div class="row" id="table-special"></div>
     </div>
 </main>
 
